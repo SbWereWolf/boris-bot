@@ -12,6 +12,9 @@ class WebhookController extends Controller
     {
         $answerId = $request->input('id');
 
+        /* можно добавить обработку ошибок,
+        ошибку писать в лог или ещё куда,
+        в ответе отдавать только 500ку */
         $result = Bot::askNextQuestion($answerId);
 
         return $result;
